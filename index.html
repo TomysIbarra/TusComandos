@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Scripts N1</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    pre { background: #111; color: #0f0; padding: 12px; border-radius: 6px; }
+    button { margin-top: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<h1>Scripts N1 – Equipos de Red</h1>
+<p>Repositorio de comandos para soporte N1.</p>
+
+<h2>Información del sistema (RAX)</h2>
+
+<pre id="cmd1">show configure system device-information</pre>
+<button onclick="copyCmd('cmd1')">Copiar comando</button>
+<p>Este comando muestra modelo, versión y datos generales del equipo.</p>
+
+<script>
+function copyCmd(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+  alert("Comando copiado ✅");
+}
+</script>
+
+</body>
+</html>
